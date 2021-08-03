@@ -14,7 +14,7 @@ const App = () => {
         <Container>
           <Route path='/' component={HomeScreen} exact />
           {/* :id = param (We use it to match if needed in an conditional) */}
-          <Route path='/product/:id' component={ProductSScreen} />
+          <Route path='/product/:id' component={ProductScreen} />
         </Container>
       </main>
       <Footer />

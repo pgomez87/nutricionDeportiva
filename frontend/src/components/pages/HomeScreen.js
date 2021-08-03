@@ -1,9 +1,21 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import Product from '../Product/Product'
-import products from '../../products'
+import axios from 'axios'
 
-const Home = () => {
+const HomeScreen = () => {
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { data } = await axios.get('/api/products')
+
+      setProducts(data)
+    }
+
+    fetchProducts()
+  }, [])
+
   return (
     <Fragment>
       <h1>Latest Products</h1>
@@ -18,4 +30,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeScreen
