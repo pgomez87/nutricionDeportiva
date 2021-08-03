@@ -1,0 +1,19 @@
+main {
+  min-height: 80vh;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+h3 {
+  padding: 0.5rem;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
