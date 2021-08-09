@@ -43,6 +43,7 @@ const UserEditScreen = ({ match, history }) => {
   }, [history, dispatch, userId, successUpdate])
 
   const submitHandler = (e) => {
+    e.preventDefault()
     dispatch(updateUser({ _id: userId, name, email, isAdmin }))
   }
 
