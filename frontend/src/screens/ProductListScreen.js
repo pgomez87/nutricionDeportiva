@@ -68,7 +68,7 @@ const ProductListScreen = ({ match, history }) => {
 
   return (
     <>
-      <Row classname='align-items-center'>
+      <Row className='align-items-center'>
         <Col>
           <h1>Productos</h1>
         </Col>
@@ -87,7 +87,7 @@ const ProductListScreen = ({ match, history }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Table striped border hover responsive className='table-sm'>
+        <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
               <th>ID</th>
